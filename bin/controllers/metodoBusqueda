@@ -1,0 +1,19 @@
+package controllers;
+
+import views.ShowConsole;
+
+public class MetodosBusqueda {
+    ShowConsole showConsole = new ShowConsole();
+    
+    public int busquedaLineal(int[] arreglo, int clave) {
+        showConsole.mostrarMensaje(" buscando");
+        for (int i = 0; i < arreglo.length; i++) {
+            if (arreglo[i] == clave) {
+                showConsole.mostrarMensaje("Elemento encontrado en la posición: " + i);
+                return i;
+            }
+        }
+        showConsole.mostrarMensaje("Elemento no encontrado.");
+        return -1;
+    }
+}

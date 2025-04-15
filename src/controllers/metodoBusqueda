@@ -1,19 +1,59 @@
 package controllers;
 
 import views.ShowConsole;
-
-public class MetodosBusqueda {
-    ShowConsole showConsole = new ShowConsole();
+private ShowConsole showConsole;
+private Persona[] people;
+public class metodoBusqueda(Persona[] Personas) {
+    private ShowConsole showConsole;
+    private Persona[] people;
+    showPersonByCode();
     
-    public int busquedaLineal(int[] arreglo, int clave) {
+    public int busquedaLineal(int[] arreglo, int code) {
         showConsole.mostrarMensaje(" buscando");
         for (int i = 0; i < arreglo.length; i++) {
-            if (arreglo[i] == clave) {
+            if (arreglo[i] == code) 
                 showConsole.mostrarMensaje("Elemento encontrado en la posición: " + i);
                 return i;
-            }
         }
         showConsole.mostrarMensaje("Elemento no encontrado.");
         return -1;
     }
+
+public int findPersonByCode(int code){
+    for(int i=0,i<people.length, i++){
+        if(people{i}.getCode()==code){
+            return i;
+        }
+
+    }
+    return -1;
+}
+
+public void showPersonByCode(int code){
+    int codeToFind=showConsole.getCode();
+    int indexPerson=findPersonByCode(codeToFind);
+    if(indexPerson>=0){
+        showConsole.showMessage("Persona encontrada");
+        showConsole.showMessage(people[indexPerson]);
+    }else{
+        showConsole.showMessage("Persona con codigo: "+ codeToFind+"No se encontro");s
+
+    }
+}
+
+    public void showMenu(){
+        System.out.println("Metodo Busqueda");
+    }
+
+    public int getCode(){
+        System.out.println("Ingrese codigo");
+        int codigo=scanner.nextInt();
+        System.out.println("Codigo Ingresado: "+ codigo);
+        return codigo;
+    }
+
+    public void showMessage(String message){
+        System.out.println(message);
+    }
+
 }

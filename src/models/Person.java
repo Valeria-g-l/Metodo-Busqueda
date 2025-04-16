@@ -1,11 +1,11 @@
 package models;
 
-public class Persona {
+public class Person {
 
     private int code;
     private String name;
 
-    public Persona(int code, String name) {
+    public Person(int code, String name) {
         this.code = code;
         this.name = name;
     }
@@ -24,5 +24,11 @@ public class Persona {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return super.toString();
     }
 }
